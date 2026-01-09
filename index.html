@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Monthly Expense Tracker (BDT)</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header>
+  <div>
+    <h1>Monthly Expense Tracker</h1>
+    <div class="live-date" id="liveDate"></div>
+  </div>
+  <button id="themeToggle">🌙</button>
+</header>
+
+<main class="container">
+
+  <section class="card">
+    <label>Select Month</label>
+    <input type="month" id="monthSelector">
+  </section>
+
+  <section class="card">
+    <h2>Add Expense</h2>
+
+    <input type="date" id="expenseDate">
+
+    <select id="category">
+      <option value="">Select Category</option>
+      <option>Food</option>
+      <option>Transport</option>
+      <option>Rent</option>
+      <option>Utilities</option>
+      <option>Shopping</option>
+      <option>Education</option>
+      <option>Medical</option>
+      <option>Others</option>
+    </select>
+
+    <input type="number" id="amount" placeholder="Amount (BDT)" min="1">
+    <input type="text" id="note" placeholder="Optional note">
+
+    <button id="addExpense">Add Expense</button>
+  </section>
+
+  <section class="card totals">
+    <div>
+      <h3>Daily Total</h3>
+      <p id="dailyTotal">৳ 0.00 BDT</p>
+    </div>
+    <div>
+      <h3>Monthly Total</h3>
+      <p id="monthlyTotal">৳ 0.00 BDT</p>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>Expenses</h2>
+    <ul id="expenseList"></ul>
+  </section>
+
+</main>
+
+<footer>
+  © 2026 Lingkan. All rights reserved.
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
